@@ -1,0 +1,116 @@
+[
+    {
+       "pk":1,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-collar-001",
+          "name":"Adjustable Nylon Dog Collar",
+          "description":"Durable and comfortable adjustable nylon dog collar with a quick-release buckle. Available in various colors and sizes.",
+          "price":12.99,
+          "category":1,
+          "rating":4.8,
+          "image_url":"",
+          "image":"dog-collar.jpg"
+       }
+    },
+    {
+       "pk":2,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-harness-002",
+          "name":"Padded No-Pull Dog Harness",
+          "description":"A comfortable and secure no-pull harness designed for easy walking and better control.",
+          "price":24.99,
+          "category":1,
+          "rating":4.7,
+          "image_url":"",
+          "image":"dog-harness.jpg"
+       }
+    },
+    {
+       "pk":3,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-leash-003",
+          "name":"Retractable Dog Leash (5m)",
+          "description":"A lightweight and durable retractable dog leash with a comfortable grip handle.",
+          "price":19.99,
+          "category":1,
+          "rating":4.5,
+          "image_url":"",
+          "image":"dog-leash.jpg"
+       }
+    },
+    {
+       "pk":4,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-bed-004",
+          "name":"Orthopedic Memory Foam Dog Bed",
+          "description":"Luxurious orthopedic memory foam bed for ultimate comfort and joint support.",
+          "price":59.99,
+          "category":2,
+          "rating":4.9,
+          "image_url":"",
+          "image":"dog-bed.jpg"
+       }
+    },
+    {
+       "pk":5,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-toy-005",
+          "name":"Interactive Squeaky Plush Dog Toy",
+          "description":"Soft and durable plush dog toy with an internal squeaker for extra fun.",
+          "price":8.99,
+          "category":3,
+          "rating":4.6,
+          "image_url":"",
+          "image":"dog-toy.jpg"
+       }
+    },
+    {
+       "pk":6,
+       "model":"products.product",
+       "fields": {
+          "sku":"dog-food-006",
+          "name":"Grain-Free Chicken & Rice Dog Food (5kg)",
+          "description":"High-protein, grain-free dog food made with real chicken and brown rice for optimal nutrition.",
+          "price":42.99,
+          "category":4,
+          "rating":4.8,
+          "image_url":"",
+          "image":"dog-food.jpg"
+       }
+    },
+    {
+       "pk":7,
+       "model":"products.product",
+       "fields": {
+          "sku":"cat-scratcher-007",
+          "name":"Luxury Cat Scratching Post",
+          "description":"Tall cat scratching post with durable sisal rope and a cozy perch for lounging.",
+          "price":39.99,
+          "category":5,
+          "rating":4.7,
+          "image_url":"",
+          "image":"cat-scratcher.jpg"
+       }
+    },
+    {
+       "pk":8,
+       "model":"products.product",
+       "fields": {
+          "sku":"cat-food-008",
+          "name":"Salmon & Sweet Potato Cat Food (2kg)",
+          "description":"Premium grain-free cat food made with fresh salmon and sweet potato for a balanced diet.",
+          "price":29.99,
+          "category":6,
+          "rating":4.9,
+          "image_url":"",
+          "image":"cat-food.jpg"
+       }
+    }
+    
+ ]
+ 
