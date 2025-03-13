@@ -55,6 +55,10 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-green {
+    background: green !important;
+}
+
 /* Media Queries*/
 
 /* Slightly larger container on x1 screens */
