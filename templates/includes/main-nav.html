@@ -17,10 +17,11 @@
                 Dogs
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="dogs-link">
-                <a href="" class="dropdown-item">Dog Food</a>
-                <a href="" class="dropdown-item">Dog Toys</a>
-                <a href="" class="dropdown-item">Dog Beds</a>
-                <a href="" class="dropdown-item">Dog Accessories</a> 
+                <a href="{% url 'products' %}?category=Dog%20Food" class="dropdown-item">Dog Food</a>
+                <a href="{% url 'products' %}?category=Dog%20Toys" class="dropdown-item">Dog Toys</a>
+                <a href="{% url 'products' %}?category=Dog%20Beds" class="dropdown-item">Dog Beds</a>
+                <a href="{% url 'products' %}?category=Dog%20Accessories" class="dropdown-item">Dog Accessories</a>
+
             </div>
         </li>
 
@@ -29,8 +30,8 @@
                 Cats
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="cats-link">
-                <a href="" class="dropdown-item">Cat Food</a>
-                <a href="" class="dropdown-item">Cat Accessories</a>
+                <a href="{% url 'products' %}?category=Cat%20Food" class="dropdown-item">Cat Food</a>
+                <a href="{% url 'products' %}?category=Cat%20Accessories" class="dropdown-item">Cat Accessories</a>
             </div>
         </li>
 
