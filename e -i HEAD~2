@@ -1,0 +1,25 @@
+[33m6f8fc6b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Updated context processor
+[33m141ee0a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Added add to bag functionality
+[33mec349f0[m Added cart context and delivery logic
+[33m469fad8[m Added shopping cart app, urls and template
+[33m4561247[m Added sorting JS and back to top link
+[33ma9e4817[m Added sorting and product counts to product
+[33m1732cdc[m Added sorting
+[33m5461629[m Added category filtering
+[33meb0d5ea[m Added search functionality
+[33mf7a33b5[m Aadded product details functionality
+[33mb45583c[m Started product template
+[33m24f31b1[m Added products views and templates
+[33ma64de7a[m Customized admin
+[33m88e60c0[m added products app, models and fixtures
+[33m287cd3d[m Added mobile header and main navbar
+[33mc06b76e[m Updated background image
+[33m9d9610c[m completed homepage header and CSS
+[33mbe6f9fd[m Added main page header
+[33maf9fc5d[m Added homepage content
+[33m4266651[m added home app and templates
+[33m9b5dd04[m added blocks to base template
+[33m31155a8[m Added allauth templates and base template
+[33m97c4f79[m setup allauth
+[33m4382ef4[m initial commit
+[33mded567e[m Initial commit
