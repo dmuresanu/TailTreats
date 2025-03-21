@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -47,7 +48,7 @@
                                     <p class="my-0">€{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update" method="POST" action="">
+                                    <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
                                             <div class="input-group">
@@ -76,18 +77,18 @@
                                     <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                 </td>
                                 <td class="py-3">
-                                    <p class="my-0">€{{ item.product.price }}</p>
+                                    <p class="my-0">€{{ item.product.price|calc_subtotal:item.quantity }}</p>
                                 </td>
                             </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+                                    <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
+                                    <h6>Delivery: €{{ delivery|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"><strong>Grand Total: €{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You're just <strong>${{ free_delivery_delta }}</strong> away from free delivery!
+                                         <p class="mb-1 text-danger">
+                                            You're just <strong>€{{ free_delivery_delta }}</strong> away from free delivery!
                                         </p>
                                     {% endif %}
                                 </td>
@@ -135,17 +136,23 @@
         form.submit();
     })
 
+    $('.update-link').click(function(e) {
+    e.preventDefault();
+    let form = $(this).siblings('form.update-form');
+    console.log('Submitting update form for item:', form);
+    form.submit();
+});
+
     // Remove item and reload on click
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('size');
-        var url = `/cart/remove/${itemId}`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
+$('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove_')[1];
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken};
+    $.post(url, data)
+     .done(function() {
+         location.reload();
+     });
+})
 </script>
 {% endblock %}
