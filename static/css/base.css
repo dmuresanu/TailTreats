@@ -27,13 +27,18 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #2596be;
     color: white;
     min-width: 260px;
 }
 
 .btn-black {
     background: black;
+    color: white;
+}
+
+.btn-blue {
+    background: #2596be;
     color: white;
 }
 
@@ -45,7 +50,11 @@ body {
 
 .shop-now-button:hover,
 .shop-now-button:active,
-.shop-now-button:focus,
+.shop-now-button:focus{
+    background:#145b73;
+    color: white;
+}
+
 .btn-black:hover,
 .btn-blacc:active,
 .btn-black:focus {
@@ -57,12 +66,16 @@ body {
     color: #000 !important;
 }
 
+.text-blue {
+    color:#145b73;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
 
-.bg-green {
-    background: green !important;
+.bg-lightblue {
+    background: #e6f4fa;
 }
 
 .overlay {
@@ -76,7 +89,7 @@ body {
 }
 
 a.category-badge > span.badge:hover {
-    background: green !important;
+    background: #2596be !important;
     color: #fff !important;
 }
 
@@ -156,7 +169,7 @@ a.category-badge > span.badge:hover {
     border-bottom-color: #343a40 !important;
 }
 
-.bag-notification-wrapper {
+.cart-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
