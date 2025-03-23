@@ -1,0 +1,1 @@
+web: gunicorn tail_treats.wsgi:application
