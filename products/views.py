@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Product, Category
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -29,16 +31,11 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-
+            
         if 'category' in request.GET:
-            category_names = request.GET['category'].split(',')
-            categories = Category.objects.filter(name__in=category_names)
-
-            if categories.exists():  
-                products = products.filter(category__in=categories)
-            else:
-                messages.error(request, "No matching categories found.")
-                categories = None  
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -71,3 +68,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
